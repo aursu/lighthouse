@@ -1,0 +1,8 @@
+version: "3"
+services:
+  centos8lighthouse:
+    build:
+      context: .
+      args:
+        centos: $OS8
+    image: "aursu/centos:${OS8TAG}-lighthouse"
