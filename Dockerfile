@@ -14,7 +14,7 @@ RUN set -ex \
 
 RUN groupadd -g 1000 lighthouse \
     && useradd -u 1000 -g 1000 -d /var/lib/lighthouse -m -s /bin/bash lighthouse \
-	&& mkdir -p /var/lib/lighthouse/.config/configstore \
+	&& mkdir -p /var/lib/lighthouse/.config/configstore /var/lib/lighthouse/reports \
 	&& chown -R lighthouse:lighthouse /var/lib/lighthouse
 
 COPY docker-entrypoint.sh /
@@ -22,7 +22,9 @@ RUN chmod +x /docker-entrypoint.sh
 
 USER lighthouse
 COPY lighthouse.json /var/lib/lighthouse/.config/configstore/lighthouse.json
+COPY perf-config.js /var/lib/lighthouse/custom-config.js
+
+VOLUME [ "/var/lib/lighthouse/reports" ]
 
 WORKDIR /var/lib/lighthouse
-
 ENTRYPOINT ["/docker-entrypoint.sh"]
