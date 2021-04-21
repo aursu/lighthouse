@@ -12,6 +12,11 @@ const perfConfig = {
     throttlingMethod: 'devtools',
     onlyCategories: ['performance'],
     output: 'json',
+    skipAudits: [
+      'full-page-screenshot',
+      'screenshot-thumbnails',
+      'final-screenshot'
+    ]
   },
 };
 

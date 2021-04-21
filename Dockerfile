@@ -21,8 +21,8 @@ COPY docker-entrypoint.sh /
 RUN chmod +x /docker-entrypoint.sh
 
 USER lighthouse
-COPY lighthouse.json /var/lib/lighthouse/.config/configstore/lighthouse.json
-COPY perf-config.js /var/lib/lighthouse/custom-config.js
+COPY config/lighthouse.json /var/lib/lighthouse/.config/configstore/lighthouse.json
+COPY config/perf-config.js /var/lib/lighthouse/custom-config.js
 
 VOLUME [ "/var/lib/lighthouse/reports" ]
 
