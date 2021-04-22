@@ -11,11 +11,10 @@ const perfConfig = {
   settings: {
     throttlingMethod: 'devtools',
     onlyCategories: ['performance'],
-    output: 'json',
     skipAudits: [
+      'final-screenshot',
       'full-page-screenshot',
-      'screenshot-thumbnails',
-      'final-screenshot'
+      'screenshot-thumbnails'
     ]
   },
 };
