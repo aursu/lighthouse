@@ -1,6 +1,9 @@
 ARG centos=8.3.2011
 FROM aursu/centos:${centos}-node
 
+# lhr ~ lighthouse report
+ENV RUN_DESCRIPTION=lhr
+
 COPY system/google-chrome.repo /etc/yum.repos.d/google-chrome.repo
 COPY system/gpg-pubkey /etc/pki/rpm-gpg/gpg-pubkey-d38b4796-570c8cd3
 
