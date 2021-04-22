@@ -54,3 +54,23 @@ docker run -ti --rm --shm-size=256m -v $(pwd):/var/lib/lighthouse/reports aursu/
 
   A low FCP time contributes to a positive user experience, as your visitors
   perceive the page to be loading fast if content is delivered sooner.
+
+* [Speed Index (SI)][https://gtmetrix.com/speed-index.html]
+
+  Speed Index (SI) is a performance metric that measures how quickly your page is visually complete above-the-fold.
+
+  SI is dependent on the size of the browser view port and differs from other metrics like First Contentful Paint (FCP) or Largest Contentful Paint (LCP) because it is not a milestone on your page's loading timeline.
+
+  Instead, it is the result of a calculation that reflects your visitor's page experience utilizing a frame-by-frame analysis of your page's load behaviour.
+
+  SI is very much tied to other page load timings. This makes it a useful overall benchmark for assessing your website's performance in its entirety.
+
+### Interactivity
+
+* [Time to Interactive (TTI)](https://gtmetrix.com/time-to-interactive.html)
+
+   Time to Interactive (TTI) is a performance metric that measures a page's load responsiveness and helps identify situations where a page looks interactive but actually isn't.
+
+  TTI measures how long it takes a page to become fully interactive i.e. it measures the time between First Contentful Paint (FCP) and the last long-task on the main-thread (before a 5 second quiet window) and represents the point at which the browser is capable of reliably responding to user input.
+
+  In simple terms, a fast TTI helps ensure that the page is usable.
