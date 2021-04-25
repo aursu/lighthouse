@@ -55,7 +55,7 @@ docker run -ti --rm --shm-size=256m -v $(pwd):/var/lib/lighthouse/reports aursu/
   A low FCP time contributes to a positive user experience, as your visitors
   perceive the page to be loading fast if content is delivered sooner.
 
-* [Speed Index (SI)][https://gtmetrix.com/speed-index.html]
+* [Speed Index (SI)](https://gtmetrix.com/speed-index.html)
 
   Speed Index (SI) is a performance metric that measures how quickly your page is visually complete above-the-fold.
 
